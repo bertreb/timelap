@@ -1,0 +1,11 @@
+{
+    "domain": "timelap",
+    "version": "0.1.0",
+    "name": "Timelap",
+    "config_flow": true,
+    "documentation": "",
+    "issue_tracker": "",
+    "requirements": ["imageio==2.26.0"],
+    "codeowners": ["@bertreb"],
+    "iot_class": "local_polling"
+}

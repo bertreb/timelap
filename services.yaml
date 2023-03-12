@@ -1,0 +1,27 @@
+make_timelap:
+  name: make timelap
+  description: create a timelap gif from camera snapshots
+  fields:
+    camera_url:
+      description: The camera snapshot url.
+      required: true
+      selector:
+        text:
+    snapshot_folder:
+      description: The directy foldername for the snapshots.
+      required: false
+      default: "/config/timelap_snapshots"
+      selector:
+        text:
+    timelap_folder:
+      description: The directy foldername for the timelap.
+      required: false
+      default: "/config/timelaps"
+      selector:
+        text:
+    duration:
+      description: the length in seconds of the timelap.
+      required: false
+      default: 5
+      selector:
+        text:
