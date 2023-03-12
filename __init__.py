@@ -30,7 +30,6 @@ def setup(hass: HomeAssistant, config: ConfigType) -> bool:
         if not os.path.exists(timelap_folder):
             os.mkdir(timelap_folder)
 
-
         #get camera images and save them in the snapshot directory
         for x in range(duration):
             now =datetime.datetime.now()
