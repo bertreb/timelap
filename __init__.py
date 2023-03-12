@@ -27,7 +27,7 @@ def setup(hass: HomeAssistant, config: ConfigType) -> bool:
         os.mkdir(snapshots_folder)
 
         # if timelapfolder doesn't exist create the timelap directory
-        if !os.path.exists(timelap_folder):
+        if not os.path.exists(timelap_folder):
             os.mkdir(timelap_folder)
 
 
