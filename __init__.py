@@ -19,11 +19,17 @@ def setup(hass: HomeAssistant, config: ConfigType) -> bool:
         camera_url = call.data.get("camera_url", 0)
         duration = int(call.data.get("duration", 0))
 
-        # clear the snapshot directory
+        # delete the snapshot directory
         if os.path.exists(snapshots_folder):
             shutil.rmtree(snapshots_folder, ignore_errors=False, onerror=None)
 
+        # create the snapshot directory
         os.mkdir(snapshots_folder)
+
+        # if timelapfolder doesn't exist create the timelap directory
+        if !os.path.exists(timelap_folder):
+            os.mkdir(timelap_folder)
+
 
         #get camera images and save them in the snapshot directory
         for x in range(duration):
